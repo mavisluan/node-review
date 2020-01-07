@@ -20,5 +20,5 @@ console.log('Total memory', os.totalmem());
 // Home dir
 console.log('Home directory', os.homedir());
 
-// Uptime
+// Uptime (in seconds)
 console.log('Uptime', os.uptime());
