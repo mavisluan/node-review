@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 console.log('Testing');
+const Logger = require('./logger');
 // Module Wrapper Function
 // (function (exports, require, module, __filename, __dirname) {
 
@@ -15,3 +16,10 @@ const Person = require('./person');
 // load local module
 const person1 = new Person('John Doe', 30);
 person1.greeting();
+
+const logger = new Logger();
+logger.on('message', data => console.log('Called Listener', data));
+
+logger.log('Hello World');
+logger.log('Hi');
+logger.log('Hello');
